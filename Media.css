@@ -5,17 +5,22 @@
 
 body {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .section1 {
     text-align: center;
+    display: flex;
+    margin-bottom: 10px;
 }
 
 div .box1 {
     padding: 50px 10px 50px 10px;
-    /*margin-right: 50px;*/
-    /*margin-bottom: 10px;*/
     background-color: rgb(243, 99, 207);
+    margin-right: 10px;
+    width: 100%;
 }
 
 div .box2 {
@@ -24,30 +29,32 @@ div .box2 {
 }
 
 .section2 {
-    padding: 15px 5px 15px 5px;
+    padding: 15px;
     background-color: rgb(172, 245, 153);
-    margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
 }
 
 .section3 {
     text-align: center;
+    display: flex;
+    background-color: rgb(250, 230, 223);
+    justify-content: space-between;
 }
 
 div .box3 {
     background-color: rgb(172, 245, 153);
-    padding: 5px;
+    padding: 50px;
 }
 
 div .box4 {
     background-color: rgb(172, 245, 153);
-    padding: 5px;
+    padding: 50px;
 }
 
 div .box5 {
     background-color: rgb(172, 245, 153);
-    padding: 5px;
+    padding: 50px;
 }
 
 .section4 {
@@ -56,21 +63,85 @@ div .box5 {
     margin-top: 15px;
 }
 
-@media only screen and (max-width: 600px) {
-    .section1 {
-        display: flex;
-    }
+@media only screen and (max-width: 400px) {
     div .box1 {
-        margin-right: 10px;
-        width: 300px
+        display: none;
+    }
+    div .box2 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .section2 {
+        display: none;
     }
     .section3 {
-        display: flex;
+        flex-direction: column;
     }
     div .box3 {
-        margin-right: 10px;
+        margin-bottom: 10px;
     }
     div .box4 {
-        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .section4 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    div .box1 {
+        width: 100%;
+        margin-right: 0px;
+    }
+    div .box2 {
+        display: none;
+    }
+    .section3 {
+        flex-direction: column;
+    }
+    div .box3 {
+        margin-bottom: 10px;
+    }
+    div .box4 {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .section1 {
+        display: none;
+    }
+    .section3 {
+        flex-direction: column;
+    }
+    div .box3 {
+        margin-bottom: 10px;
+    }
+    div .box4 {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .section1 {
+        display: none;
+    }
+    .section2 {
+        display: none;
+    }
+    .section3 {
+        flex-direction: row;
+    }
+    div .box3 {
+        margin: 10px;
+        width: 100%;
+    }
+    div .box4 {
+        margin: 10px;
+        width: 100%;
+    }
+    div .box5 {
+        margin: 10px;
+        width: 100%;
     }
 }
